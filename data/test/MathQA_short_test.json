@@ -1,0 +1,299 @@
+[
+    {
+        "Problem": "a shopkeeper sold an article offering a discount of 5 % and earned a profit of 31.1 % . what would have been the percentage of profit earned if no discount had been offered ?",
+        "Rationale": "\"giving no discount to customer implies selling the product on printed price . suppose the cost price of the article is 100 . then printed price = 100 \u00e3 \u2014 ( 100 + 31.1 ) / ( 100 \u00e2 \u02c6 \u2019 5 ) = 138 hence , required % profit = 138 \u00e2 \u20ac \u201c 100 = 38 % answer a\"",
+        "options": "a ) 38 , b ) 27.675 , c ) 30 , d ) data inadequate , e ) none of these",
+        "correct": "a",
+        "annotated_formula": "subtract(divide(multiply(add(const_100, 31.1), const_100), subtract(const_100, 5)), const_100)",
+        "linear_formula": "add(n1,const_100)|subtract(const_100,n0)|multiply(#0,const_100)|divide(#2,#1)|subtract(#3,const_100)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "what will be the difference between simple and compound interest at 14 % per annum on a sum of rs . 1000 after 4 years ?",
+        "Rationale": "\"s . i . = ( 1000 * 14 * 4 ) / 100 = rs . 560 c . i . = [ 1000 * ( 1 + 14 / 100 ) 4 - 1000 ] = rs . 689 difference = ( 689 - 560 ) = rs . 129 answer : a\"",
+        "options": "a ) 129 , b ) 130 , c ) 124 , d ) 133 , e ) 145",
+        "correct": "a",
+        "annotated_formula": "subtract(subtract(multiply(1000, power(add(divide(14, const_100), const_1), 4)), 1000), multiply(multiply(1000, divide(14, const_100)), 4))",
+        "linear_formula": "divide(n0,const_100)|add(#0,const_1)|multiply(n1,#0)|multiply(n2,#2)|power(#1,n2)|multiply(n1,#4)|subtract(#5,n1)|subtract(#6,#3)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "there are 28 stations between hyderabad and bangalore . how many second class tickets have to be printed , so that a passenger can travel from any station to any other station ?",
+        "Rationale": "\"the total number of stations = 30 from 30 stations we have to choose any two stations and the direction of travel ( i . e . , hyderabad to bangalore is different from bangalore to hyderabad ) in 3 \u2070 p \u2082 ways . 30 p \u2082 = 30 * 29 = 870 . answer : c\"",
+        "options": "a ) 156 , b ) 167 , c ) 870 , d ) 352 , e ) 380",
+        "correct": "c",
+        "annotated_formula": "multiply(add(28, const_1), add(add(28, const_1), const_1))",
+        "linear_formula": "add(n0,const_1)|add(#0,const_1)|multiply(#0,#1)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "the present population of a town is 3888 . population increase rate is 20 % p . a . find the population of town before 2 years ?",
+        "Rationale": "\"p = 3888 r = 20 % required population of town = p / ( 1 + r / 100 ) ^ t = 3888 / ( 1 + 20 / 100 ) ^ 2 = 3888 / ( 6 / 5 ) ^ 2 = 2700 ( approximately ) answer is e\"",
+        "options": "a ) 2500 , b ) 2100 , c ) 3500 , d ) 3600 , e ) 2700",
+        "correct": "e",
+        "annotated_formula": "add(3888, divide(multiply(3888, 20), const_100))",
+        "linear_formula": "multiply(n0,n1)|divide(#0,const_100)|add(n0,#1)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "the triplicate ratio of 1 : 9 is ?",
+        "Rationale": "\"13 : 93 = 1 : 729 answer : e\"",
+        "options": "a ) 1 : 0 , b ) 1 : 8 , c ) 1 : 7 , d ) 1 : 2 , e ) 1 : 729",
+        "correct": "e",
+        "annotated_formula": "divide(power(const_2.0, 9), power(const_3.0, 9))",
+        "linear_formula": "power(const_2.0,n1)|power(const_3.0,n1)|divide(#0,#1)|",
+        "category": "other"
+    },
+    {
+        "Problem": "the sum of all the integers s such that - 26 < s < 24 is",
+        "Rationale": "\"easy one - - 25 , - 24 , - 23 , - 22 , . . . . . . - 1,0 , 1 , 2 . . . . , 22 , 23 cancel everyhitng and we ' re left with - - 25 and - 24 s = - 49 . d is the answer .\"",
+        "options": "a ) 0 , b ) - 2 , c ) - 25 , d ) - 49 , e ) - 51",
+        "correct": "d",
+        "annotated_formula": "add(add(negate(26), const_1), add(add(negate(26), const_1), const_1))",
+        "linear_formula": "negate(n0)|add(#0,const_1)|add(#1,const_1)|add(#1,#2)|",
+        "category": "general"
+    },
+    {
+        "Problem": "a full stationary oil tank that is a right circular cylinder has a radius of 100 feet and a height of 25 feet . oil is pumped from the stationary tank to an oil truck that has a tank that is a right circular cylinder until the truck ' s tank is completely filled . if the truck ' s tank has a radius of 6 feet and a height of 10 feet , how far ( in feet ) did the oil level drop in the stationary tank ?",
+        "Rationale": "\"the volume of oil pumped to the tank = the volume of oil taken away from stationary cylinder . pi * 36 * 10 = pi * h * 100 * 100 ( h is distance that the oil level dropped ) h = 360 / 10,000 = 36 / 1000 = 0.036 ft the answer is a .\"",
+        "options": "a ) 0.036 , b ) 0.36 , c ) 0.6 , d ) 6 , e ) 3.6",
+        "correct": "a",
+        "annotated_formula": "divide(volume_cylinder(6, 10), circle_area(100))",
+        "linear_formula": "circle_area(n0)|volume_cylinder(n2,n3)|divide(#1,#0)|",
+        "category": "geometry"
+    },
+    {
+        "Problem": "each week a restaurant serving mexican food uses the same volume of chili paste , which comes in either 35 - ounce cans or 25 - ounce cans of chili paste . if the restaurant must order 20 more of the smaller cans than the larger cans to fulfill its weekly needs , then how manysmallercans are required to fulfill its weekly needs ?",
+        "Rationale": "\"let x be the number of 35 ounce cans . therefore ( x + 20 ) is the number of 25 ounce cans . total volume is same , therefore 35 x = 25 ( x + 20 ) 10 x = 500 x = 50 therefore , number of 15 ounce cans = 50 + 20 = 70 ans - b\"",
+        "options": "a ) 60 , b ) 70 , c ) 80 , d ) 100 , e ) 120",
+        "correct": "b",
+        "annotated_formula": "add(25, 20)",
+        "linear_formula": "add(n1,n2)|",
+        "category": "general"
+    },
+    {
+        "Problem": "if n is an integer and 101 n ^ 2 is less than or equal to 10000 , what is the greatest possible value of n ?",
+        "Rationale": "\"101 * n ^ 2 < = 10000 n ^ 2 < = 10000 / 101 which will be less than 100 since 10000 / 100 = 100 which is the square of 9 next closest value of n where n ^ 2 < = 100 is 9 ans c\"",
+        "options": "a ) 7 , b ) 8 , c ) 9 , d ) 10 , e ) 11",
+        "correct": "c",
+        "annotated_formula": "floor(sqrt(divide(10000, 101)))",
+        "linear_formula": "divide(n2,n0)|sqrt(#0)|floor(#1)|",
+        "category": "general"
+    },
+    {
+        "Problem": "a constructor estimates that 10 people can paint mr khans house in 4 days . if he uses 5 people instead of 10 , how long will they take to complete the job ?",
+        "Rationale": "\"explanation : use formula for a work members \u00e3 \u2014 days = constant 10 \u00e3 \u2014 4 = 5 \u00e3 \u2014 a a = 8 so answer is 8 days answer : d\"",
+        "options": "a ) 10 , b ) 4 , c ) 5 , d ) 8 , e ) 6",
+        "correct": "d",
+        "annotated_formula": "divide(const_1, multiply(divide(const_1, multiply(const_4.0, 10)), 4))",
+        "linear_formula": "multiply(n0,n1)|divide(const_1,#0)|multiply(n2,#1)|divide(const_1,#2)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "the population of a town is 8000 . it decreases annually at the rate of 20 % p . a . what will be its population after 3 years ?",
+        "Rationale": "\"formula : ( after = 100 denominator ago = 100 numerator ) 8000 \u00e3 \u2014 80 / 100 \u00e3 \u2014 80 / 100 x 80 / 100 = 4096 answer : b\"",
+        "options": "a ) 5100 , b ) 4096 , c ) 5200 , d ) 5400 , e ) 5500",
+        "correct": "b",
+        "annotated_formula": "subtract(subtract(8000, multiply(8000, divide(20, const_100))), multiply(subtract(8000, multiply(8000, divide(20, const_100))), divide(20, const_100)))",
+        "linear_formula": "divide(n1,const_100)|multiply(n0,#0)|subtract(n0,#1)|multiply(#0,#2)|subtract(#2,#3)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "the percentage profit earned by selling an article for rs . 1920 is equal to the percentage loss incurred by selling the same article for rs . 1280 . at what price should the article be sold to make 40 % profit ?",
+        "Rationale": "\"let c . p . be rs . x . then , ( 1920 - x ) / x * 100 = ( x - 1280 ) / x * 100 1920 - x = x - 1280 2 x = 3200 = > x = 1600 required s . p . = 140 % of rs . 1600 = 140 / 100 * 1600 = rs . 2240 . answer : e\"",
+        "options": "a ) 2000 , b ) 2778 , c ) 2299 , d ) 2778 , e ) 2240",
+        "correct": "e",
+        "annotated_formula": "multiply(divide(add(const_100, 40), const_100), divide(add(1920, 1280), const_2))",
+        "linear_formula": "add(n2,const_100)|add(n0,n1)|divide(#0,const_100)|divide(#1,const_2)|multiply(#2,#3)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "running at the same constant rate , 6 identical machines can produce a total of 360 bottles per minute . at this rate , how many bottles could 10 such machines produce in 4 minutes ?",
+        "Rationale": "\"let the required number of bottles be x . more machines , more bottles ( direct proportion ) more minutes , more bottles ( direct proportion ) machines 6 : 10 : : 360 : x time ( in minutes ) 1 : 4 6 x 1 x x = 10 x 4 x 360 x = ( 10 x 4 x 360 ) / ( 6 ) x = 2400 . answer : c\"",
+        "options": "a ) 648 , b ) 1800 , c ) 2400 , d ) 10800 , e ) 10900",
+        "correct": "c",
+        "annotated_formula": "multiply(multiply(divide(360, 6), 4), 10)",
+        "linear_formula": "divide(n1,n0)|multiply(n3,#0)|multiply(n2,#1)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "there are 1000 buildings in a street . a sign - maker is contracted to number the houses from 1 to 1000 . how many zeroes will he need ?",
+        "Rationale": "divide as ( 1 - 100 ) ( 100 - 200 ) . . . . ( 900 - 1000 ) total 192 answer : c",
+        "options": "a ) 190 , b ) 191 , c ) 192 , d ) 193 , e ) 194",
+        "correct": "c",
+        "annotated_formula": "add(add(divide(1000, const_10), multiply(subtract(const_10, 1), const_10)), const_2)",
+        "linear_formula": "divide(n0,const_10)|subtract(const_10,n1)|multiply(#1,const_10)|add(#0,#2)|add(#3,const_2)",
+        "category": "general"
+    },
+    {
+        "Problem": "a man bought 20 shares of rs . 50 at 5 discount , the rate of dividend being 13 . the rate of interest obtained is :",
+        "Rationale": "\"investment = rs . [ 20 x ( 50 - 5 ) ] = rs . 900 . face value = rs . ( 50 x 20 ) = rs . 1000 . dividend = rs . 27 x 1000 = rs . 135 . 2 100 interest obtained = 135 x 100 % = 15 % 900 view answer discuss in forum answer : c\"",
+        "options": "a ) 27 % , b ) 87 % , c ) 15 % , d ) 66 % , e ) 88 %",
+        "correct": "c",
+        "annotated_formula": "divide(multiply(multiply(20, 50), divide(13, const_100)), multiply(20, subtract(50, 5)))",
+        "linear_formula": "divide(n3,const_100)|multiply(n0,n1)|subtract(n1,n2)|multiply(#0,#1)|multiply(n0,#2)|divide(#3,#4)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "? % of 360 = 108",
+        "Rationale": "\"? % of 360 = 108 or , ? = 108 \u00d7 100 / 360 = 30 answer a\"",
+        "options": "a ) 30 , b ) 36 , c ) 64 , d ) 72 , e ) none of these",
+        "correct": "a",
+        "annotated_formula": "divide(multiply(108, const_100), 360)",
+        "linear_formula": "multiply(n1,const_100)|divide(#0,n0)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "a train 300 m long is running at a speed of 45 km / hr . in what time will it pass a bridge 150 m long ?",
+        "Rationale": "\"speed = 45 * 5 / 18 = 25 / 2 m / sec total distance covered = 300 + 150 = 450 m required time = 450 * 2 / 25 = 36 sec answer : option b\"",
+        "options": "a ) 40 , b ) 36 , c ) 41 , d ) 42 , e ) 34",
+        "correct": "b",
+        "annotated_formula": "divide(300, multiply(subtract(45, 150), const_0_2778))",
+        "linear_formula": "subtract(n1,n2)|multiply(#0,const_0_2778)|divide(n0,#1)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "what is the sum of all digits for the number 10 ^ 29 - 41 ?",
+        "Rationale": "\"10 ^ 29 is a 30 - digit number : 1 followed by 29 zeros . 10 ^ 29 - 41 is a 29 - digit number : 27 9 ' s and 59 at the end . the sum of the digits is 27 * 9 + 5 + 9 = 257 . the answer is a .\"",
+        "options": "a ) 257 , b ) 242 , c ) 231 , d ) 202 , e ) 187",
+        "correct": "a",
+        "annotated_formula": "multiply(add(divide(subtract(subtract(29, 10), const_2), const_2), 10), divide(add(subtract(29, 10), const_2), const_2))",
+        "linear_formula": "subtract(n1,n0)|add(#0,const_2)|subtract(#0,const_2)|divide(#2,const_2)|divide(#1,const_2)|add(n0,#3)|multiply(#5,#4)|",
+        "category": "general"
+    },
+    {
+        "Problem": "a train running at the speed of 120 km / hr crosses a pole in 18 seconds . what is the length of the train ?",
+        "Rationale": "\"speed = ( 120 x ( 5 / 18 ) m / sec = ( 100 / 3 ) m / sec . length of the train = ( speed x time ) . length of the train = ( ( 100 / 3 ) x 18 ) m = 600 m e\"",
+        "options": "a ) 560 , b ) 570 , c ) 580 , d ) 590 , e ) 600",
+        "correct": "e",
+        "annotated_formula": "multiply(divide(multiply(120, const_1000), const_3600), 18)",
+        "linear_formula": "multiply(n0,const_1000)|divide(#0,const_3600)|multiply(n1,#1)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "a train 100 meters long completely crosses a 300 meters long bridge in 45 seconds . what is the speed of the train is ?",
+        "Rationale": "\"s = ( 100 + 300 ) / 45 = 400 / 45 * 18 / 5 = 32 answer : a\"",
+        "options": "a ) 32 kmph , b ) 76 kmph , c ) 34 kmph , d ) 43 kmph , e ) 40 kmph",
+        "correct": "a",
+        "annotated_formula": "divide(divide(add(100, 300), const_1000), divide(45, const_3600))",
+        "linear_formula": "add(n0,n1)|divide(n2,const_3600)|divide(#0,const_1000)|divide(#2,#1)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "each month a retailer sells 100 identical items . on each item he makes a profit of $ 40 that constitutes 10 % of the item ' s price to the retailer . if the retailer contemplates giving a 5 % discount on the items he sells , what is the least number of items he will have to sell each month to justify the policy of the discount ?",
+        "Rationale": "\"for this question , we ' ll need the following formula : sell price = cost + profit we ' re told that the profit on 1 item is $ 20 and that this represents 10 % of the cost : sell price = cost + $ 40 sell price = $ 400 + $ 40 thus , the sell price is $ 440 for each item . selling all 100 items gives the retailer . . . 100 ( $ 40 ) = $ 2,000 of profit if the retailer offers a 5 % discount on the sell price , then the equation changes . . . 5 % ( 440 ) = $ 22 discount $ 418 = $ 400 + $ 18 now , the retailer makes a profit of just $ 18 per item sold . to earn $ 2,000 in profit , the retailer must sell . . . . $ 18 ( x ) = $ 2,000 x = 2,000 / 18 x = 222.222222 items you ' ll notice that this is not among the answer choices . . . . 221 and 223 are . selling 221 items would get us 9 ( 221 ) = $ 1989 which is not enough money . to get back to at least $ 2,000 , we need to sell 223 items . final answer : d\"",
+        "options": "a ) 191 , b ) 213 , c ) 221 , d ) 223 , e ) 226",
+        "correct": "d",
+        "annotated_formula": "divide(multiply(100, 40), subtract(40, divide(multiply(add(divide(multiply(100, 40), 10), 40), 5), 100)))",
+        "linear_formula": "multiply(n0,n1)|divide(#0,n2)|add(n1,#1)|multiply(n3,#2)|divide(#3,n0)|subtract(n1,#4)|divide(#0,#5)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "the average age of 15 students of a class is 14 years . out of these , the average age of 5 students is 14 years and that of the other 9 students is 16 years . tee age of the 15 th student is ?",
+        "Rationale": "\"age of the 15 th student = [ 15 * 14 - ( 14 * 5 + 16 * 9 ) ] = ( 210 - 214 ) = 4 years . answer : b\"",
+        "options": "a ) 3 years , b ) 4 years , c ) 5 years , d ) 6 years , e ) 7 years",
+        "correct": "b",
+        "annotated_formula": "subtract(multiply(15, 15), add(multiply(5, 14), multiply(9, 16)))",
+        "linear_formula": "multiply(n0,n0)|multiply(n2,n3)|multiply(n4,n5)|add(#1,#2)|subtract(#0,#3)|",
+        "category": "general"
+    },
+    {
+        "Problem": "bookman purchased 55 copies of a new book released recently , 10 of which are hardback and sold for $ 20 each , and rest are paperback and sold for $ 10 each . if 14 copies were sold and the total value of the remaining books was 460 , how many paperback copies were sold ?",
+        "Rationale": "\"the bookman had 10 hardback ad 55 - 10 = 45 paperback copies ; 14 copies were sold , hence 55 - 14 = 41 copies were left . let # of paperback copies left be p then 10 p + 20 ( 41 - p ) = 460 - - > 10 p = 360 - - > p = 36 # of paperback copies sold is 45 - 36 = 9 answer : e\"",
+        "options": "a ) 10 , b ) 11 , c ) 12 , d ) 13 , e ) 9",
+        "correct": "e",
+        "annotated_formula": "divide(subtract(subtract(add(multiply(subtract(55, 10), 10), multiply(10, 20)), 460), multiply(gcd(55, 10), 20)), 10)",
+        "linear_formula": "gcd(n0,n1)|multiply(n1,n2)|subtract(n0,n1)|multiply(n1,#2)|multiply(n2,#0)|add(#3,#1)|subtract(#5,n5)|subtract(#6,#4)|divide(#7,n1)|",
+        "category": "general"
+    },
+    {
+        "Problem": "diana is painting statues . she has 1 / 2 of a gallon of paint remaining . each statue requires 1 / 16 gallon of paint . how many statues can she paint ?",
+        "Rationale": "\"number of statues = all the paint \u00f7 amount used per statue = 1 / 2 \u00f7 1 / 16 = 8 / 16 * 16 / 1 = 8 / 1 = 8 answer is a .\"",
+        "options": "a ) 8 , b ) 20 , c ) 28 , d ) 14 , e ) 19",
+        "correct": "a",
+        "annotated_formula": "divide(divide(1, 2), divide(1, 16))",
+        "linear_formula": "divide(n0,n1)|divide(n2,n3)|divide(#0,#1)|",
+        "category": "general"
+    },
+    {
+        "Problem": "if the price of gasoline increases by 25 % and a driver intends to spend only 20 % more on gasoline , by how much percent should the driver reduce the quantity of gasoline that he buys ?",
+        "Rationale": "\"let x be the amount of gasoline the driver buys originally . let y be the new amount of gasoline the driver should buy . let p be the original price per liter . ( 1.25 * p ) y = 1.2 ( p * x ) y = ( 1.2 / 1.25 ) x = 0.96 x which is a reduction of 4 % . the answer is c .\"",
+        "options": "a ) 2 % , b ) 3 % , c ) 4 % , d ) 5 % , e ) 6 %",
+        "correct": "c",
+        "annotated_formula": "multiply(divide(subtract(add(25, const_100), add(20, const_100)), add(25, const_100)), const_100)",
+        "linear_formula": "add(n0,const_100)|add(n1,const_100)|subtract(#0,#1)|divide(#2,#0)|multiply(#3,const_100)|",
+        "category": "general"
+    },
+    {
+        "Problem": "an art gallery has only paintings and sculptures . currently , 1 / 3 of the pieces of art are displayed , and 1 / 6 of the pieces on display are sculptures . if 1 / 3 of the pieces not on display are paintings , and 1000 sculptures are not on display , how many pieces of art does the gallery have ?",
+        "Rationale": "too many words and redundant info there . ( i ) 1 / 3 of the pieces of art are displayed , hence 2 / 3 of the pieces of art are not displayed . ( ii ) 1 / 6 of the pieces on display are sculptures , hence 5 / 6 of the pieces on display are paintings . ( iii ) 1 / 3 of the pieces not on display are paintings , hence 2 / 3 of the pieces not on display are sculptures . 1000 sculptures are not on display , so according to ( iii ) 2 / 3 * { not on display } = 1000 - - > { not on display } = 1500 . according to ( i ) 2 / 3 * { total } = 1500 - - > { total } = 2250 . answer : b .",
+        "options": "a ) 360 , b ) 2250 , c ) 540 , d ) 640 , e ) 720",
+        "correct": "b",
+        "annotated_formula": "divide(divide(1000, subtract(const_1, divide(1, 3))), subtract(const_1, divide(1, 3)))",
+        "linear_formula": "divide(n0,n1)|subtract(const_1,#0)|divide(n6,#1)|divide(#2,#1)",
+        "category": "general"
+    },
+    {
+        "Problem": "john and ingrid pay 30 % and 40 % tax annually , respectively . if john makes $ 60000 and ingrid makes $ 72000 , what is their combined tax rate ?",
+        "Rationale": "\"( 1 ) when 30 and 40 has equal weight or weight = 1 / 2 , the answer would be 35 . ( 2 ) when 40 has larger weight than 30 , the answer would be in between 35 and 40 . unfortunately , we have 2 answer choices d and e that fit that condition so we need to narrow down our range . ( 3 ) get 72000 / 132000 = 6 / 11 . 6 / 11 is a little above 6 / 12 = 1 / 2 . thus , our answer is just a little above 35 . answer : d\"",
+        "options": "a ) 32 % , b ) 34.4 % , c ) 35 % , d ) 35.6 % , e ) 36.4 %",
+        "correct": "d",
+        "annotated_formula": "multiply(divide(add(multiply(divide(30, const_100), 60000), multiply(divide(40, const_100), 72000)), add(72000, 60000)), const_100)",
+        "linear_formula": "add(n2,n3)|divide(n0,const_100)|divide(n1,const_100)|multiply(n2,#1)|multiply(n3,#2)|add(#3,#4)|divide(#5,#0)|multiply(#6,const_100)|",
+        "category": "gain"
+    },
+    {
+        "Problem": "the lenght of a room is 5.5 m and width is 4 m . find the cost of paving the floor by slabs at the rate of rs . 900 per sq . metre .",
+        "Rationale": "\"area of the floor = ( 5.5 \u00e3 \u2014 4 ) m 2 = 22 m 2 . cost of paving = rs . ( 900 \u00e3 \u2014 22 ) = rs . 19800 answer : option a\"",
+        "options": "a ) s . 19,800 , b ) s . 15,600 , c ) s . 16,500 , d ) s . 17,600 , e ) s . 17,900",
+        "correct": "a",
+        "annotated_formula": "multiply(900, multiply(5.5, 4))",
+        "linear_formula": "multiply(n0,n1)|multiply(n2,#0)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "a factory that employs 1000 assembly line workers pays each of these workers $ 5 per hour for the first 40 hours worked during a week and 1 \u00bd times that rate for hours worked in excess of 40 . what was the total payroll for the assembly - line workers for a week in which 30 percent of them worked 15 hours , 50 percent worked 40 hours , and the rest worked 50 hours ?",
+        "Rationale": "\"30 % of 1000 = 300 worked for 15 hours payment @ 5 / hr total payment = 300 * 15 * 5 = 22500 50 % of 1000 = 500 worked for 40 hours payment @ 5 / hr total payment = 500 * 40 * 5 = 100000 remaining 200 worked for 50 hours payment for first 40 hours @ 5 / hr payment = 200 * 40 * 5 = 40000 payment for next 10 hr @ 7.5 / hr payment = 200 * 10 * 7.5 = 15000 total payment = 22500 + 100000 + 40000 + 15000 = 1775000 hence , answer is d\"",
+        "options": "a ) $ 180,000 , b ) $ 185,000 , c ) $ 190,000 , d ) $ 177,500 , e ) $ 205,000",
+        "correct": "d",
+        "annotated_formula": "multiply(add(divide(1, 15), 1), divide(multiply(1000, divide(add(add(multiply(add(multiply(divide(const_3, const_2), multiply(5, 15)), multiply(40, 5)), subtract(15, add(const_3, 5))), multiply(multiply(40, 5), 5)), multiply(multiply(5, 15), const_3)), 15)), 1000))",
+        "linear_formula": "add(n1,const_3)|divide(n3,n6)|divide(const_3,const_2)|multiply(n1,n6)|multiply(n1,n2)|add(n3,#1)|multiply(#2,#3)|multiply(n1,#4)|multiply(#3,const_3)|subtract(n6,#0)|add(#6,#4)|multiply(#10,#9)|add(#11,#7)|add(#12,#8)|divide(#13,n6)|multiply(n0,#14)|divide(#15,n0)|multiply(#5,#16)|",
+        "category": "general"
+    },
+    {
+        "Problem": "a corporation double its annual bonus to 100 of its employees . what percent of the employees \u2019 new bonus is the increase ?",
+        "Rationale": "let the annual bonus be x . a corporation double its annual bonus . so new bonus = 2 x . increase = 2 x - x = x the increase is what percent of the employees \u2019 new bonus = ( x / 2 x ) * 100 = 50 % hence a .",
+        "options": "a ) 50 % , b ) 12 % , c ) 8 % , d ) 6 % , e ) 5 %",
+        "correct": "a",
+        "annotated_formula": "multiply(divide(subtract(const_2, const_1), const_2), 100)",
+        "linear_formula": "subtract(const_2,const_1)|divide(#0,const_2)|multiply(n0,#1)",
+        "category": "general"
+    },
+    {
+        "Problem": "a and b together do a work in 20 days . b and c together in 15 days and c and a in 12 days . then b alone can finish same work in how many days ?",
+        "Rationale": "\"( a + b ) work in 1 day = 1 / 20 , ( b + c ) work in 1 days = 1 / 15 . , ( c + a ) work in 1 days = 1 / 12 ( 1 ) adding = 2 [ a + b + c ] in 1 day work = [ 1 / 20 + 1 / 15 + 1 / 12 ] = 1 / 5 ( a + b + c ) work in 1 day = 1 / 10 b work in 1 days = [ a + b + c ] work in 1 days - work of ( a + c ) in 1 days = [ 1 / 10 - 1 / 12 ] = 1 / 60 b alone finish work in 60 days answer b\"",
+        "options": "a ) 50 , b ) 60 , c ) 45 , d ) 35 , e ) 48",
+        "correct": "b",
+        "annotated_formula": "inverse(divide(add(inverse(12), add(inverse(20), inverse(15))), const_2))",
+        "linear_formula": "inverse(n0)|inverse(n1)|inverse(n2)|add(#0,#1)|add(#3,#2)|divide(#4,const_2)|inverse(#5)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "two trains of equal length , running with the speeds of 60 and 16 kmph , take 50 seconds to cross each other while they are running in the same direction . what time will they take to cross each other if they are running in opposite directions ?",
+        "Rationale": "\"rs = 60 - 40 = 20 * 5 / 18 = 100 / 18 t = 50 d = 50 * 100 / 18 = 2500 / 9 rs = 60 + 16 = 76 * 5 / 18 t = 2500 / 9 * 18 / 380 = 13.15 sec . answer : d\"",
+        "options": "a ) 10.11 , b ) 8.11 , c ) 77.2 , d ) 13.15 , e ) 22.22",
+        "correct": "d",
+        "annotated_formula": "multiply(multiply(multiply(const_0_2778, subtract(60, 16)), 50), inverse(multiply(const_0_2778, add(60, 16))))",
+        "linear_formula": "add(n0,n1)|subtract(n0,n1)|multiply(#0,const_0_2778)|multiply(#1,const_0_2778)|inverse(#2)|multiply(n2,#3)|multiply(#4,#5)|",
+        "category": "physics"
+    },
+    {
+        "Problem": "calculate the ratio between x and y if 30 % of x equal to 50 % of y ?",
+        "Rationale": "\"explanation : 30 x = 50 y x : y = 30 : 50 = 3 : 5 answer : b\"",
+        "options": "a ) 4 : 5 , b ) 3 : 5 , c ) 3 : 7 , d ) 3 : 2 , e ) 4 : 5",
+        "correct": "b",
+        "annotated_formula": "divide(30, 50)",
+        "linear_formula": "divide(n0,n1)|",
+        "category": "general"
+    }
+]
